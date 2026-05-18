@@ -26,7 +26,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             className="text-4xl md:text-5xl font-black font-outfit"
           >
-            About <span className="text-orange-500">Omni Logistics</span>
+            About <span className="text-orange-500">Us</span>
           </motion.h1>
           <p className="mt-4 text-slate-400 max-w-2xl font-medium">
             Discover our journey and why we are the most trusted name in packers and movers in Jalandhar.
@@ -34,7 +34,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main Content (Who We Are) */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -58,19 +58,21 @@ export default function AboutPage() {
             >
               <h2 className="text-xs font-black text-orange-600 tracking-[0.2em] uppercase mb-3">Who We Are</h2>
               <h3 className="text-3xl font-black text-slate-900 mb-6 font-outfit">Welcome To Movers & Packers</h3>
-              <p className="text-slate-600 leading-relaxed mb-6 text-sm">
-                We provide hassle-free shifting services and use the best packaging material. We strive to surpass the customer expectations in delivering the service. Loading and unloading services are provided by a highly dedicated team of professionals.
-              </p>
-              <p className="text-slate-600 leading-relaxed mb-8 text-sm">
-                Our primary concern is customer satisfaction and rendering the best services. It is all possible due to our dedicated team of professionals who make the shifting simpler and convenient. Our skilled staff members ensure that the goods are packed and moved meticulously. Till date we have managed to successfully handle many residential and commercial relocations.
-              </p>
+              <div className="space-y-6 text-slate-600 leading-relaxed text-sm font-medium">
+                <p>
+                  We provide hassle-free shifting services and use the best packaging material. We strive to surpass the customer expectations in delivering the service. Loading and unloading services are provided by a highly dedicated team of professionals.
+                </p>
+                <p>
+                  Our primary concern is customer satisfaction and rendering the best services. It is all possible due to our dedicated team of professionals who make the shifting simpler and convenient. Our skilled staff members ensure that the goods are packed and moved meticulously. Till date we have managed to successfully handle many residential and commercial relocations.
+                </p>
+              </div>
               
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-100">
                 {[
                   "Extensive years of experience",
                   "Round the clock support service",
                   "Trusted service providers",
-                  "Dedicated team of professionals"
+                  "Trusted service providers"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 size={16} className="text-orange-600 shrink-0" />
@@ -88,44 +90,44 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-xs font-black text-orange-600 tracking-[0.2em] uppercase mb-2">Our Strengths</h2>
-            <h3 className="text-3xl font-black text-slate-950 font-outfit">Why Choose Omni Logistics?</h3>
+            <h3 className="text-3xl font-black text-slate-950 font-outfit">Why Choose us</h3>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Door to Door Shifting",
-                desc: "Our professionals ensure that all of your stuff is picked up from your doorstep and delivered safely to your new place.",
+                title: "The door to door shifting service",
+                desc: "We understand the importance of the door to door shifting service for a long distance location. Thus our professionals ensure that all of your stuff is picked up from your doorstep and delivered safely to your new place.",
                 icon: <Truck className="text-white" size={24} />,
                 color: "bg-orange-600"
               },
               {
-                title: "High Quality Packing",
-                desc: "We bring our own high-quality packing material and use multiple layers to protect the goods during transport.",
+                title: "High quality packing material",
+                desc: "One of the critical things in shifting is the packing material. To deliver a quality service we bring our own high-quality packing material and use multiple layers to protect the goods during the transport.",
                 icon: <Package className="text-white" size={24} />,
                 color: "bg-slate-900"
               },
               {
-                title: "Complete Solutions",
-                desc: "Skilled workforce with experience in handling heavy loads and delicate stuff like TV units and fridges.",
+                title: "We render complete solution",
+                desc: "We have a highly skilled workforce who have extensive experience in handling heavy loads and delicate stuff. This may include a TV unit, double door fridge, glass door cupboards, crockery etc.",
                 icon: <Award className="text-white" size={24} />,
                 color: "bg-orange-500"
               },
               {
                 title: "24/7 Support",
-                desc: "Round the clock assistance for all your relocation queries and real-time tracking updates.",
+                desc: "We have a highly skilled workforce who have extensive experience in handling heavy loads and delicate stuff. This may include a TV unit, double door fridge, glass door cupboards, crockery etc.",
                 icon: <Clock className="text-white" size={24} />,
                 color: "bg-blue-600"
               },
               {
-                title: "Affordable Pricing",
-                desc: "Premium services at competitive rates. We believe quality relocation should be accessible to everyone.",
+                title: "Affordable Service",
+                desc: "We have a highly skilled workforce who have extensive experience in handling heavy loads and delicate stuff. This may include a TV unit, double door fridge, glass door cupboards, crockery etc.",
                 icon: <Users className="text-white" size={24} />,
                 color: "bg-purple-600"
               },
               {
                 title: "Fast & Safe Service",
-                desc: "We prioritize safety and speed equally, ensuring your transition is as smooth as possible.",
+                desc: "We have a highly skilled workforce who have extensive experience in handling heavy loads and delicate stuff. This may include a TV unit, double door fridge, glass door cupboards, crockery etc.",
                 icon: <ShieldCheck className="text-white" size={24} />,
                 color: "bg-green-600"
               }
@@ -142,7 +144,7 @@ export default function AboutPage() {
                   {feature.icon}
                 </div>
                 <h4 className="text-xl font-bold text-slate-900 mb-4 font-outfit">{feature.title}</h4>
-                <p className="text-slate-500 text-xs leading-relaxed">
+                <p className="text-slate-500 text-xs leading-relaxed font-semibold">
                   {feature.desc}
                 </p>
               </motion.div>

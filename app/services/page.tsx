@@ -18,7 +18,7 @@ export default function ServicesPage() {
       id: "home-moving",
       title: "Home Moving",
       desc: "Omni Movers offer quick and affordable shifting services to families and individuals to relieve them from the burden of moving involved in relocation.",
-      longDesc: "Every relocation move from simple to most demanding requires experts to handle the service effectively. For this reason, the complete packing process is done under the supervision of experts. Our staff members work tirelessly to ensure that the items are perfectly packed and don’t get damaged during transportation.\n\nHousehold relocation services require an entire package of goods including initial inspection to the final settings at the new location. In order to maintain safety of the goods, we make sure to use superior quality packaging materials such as cartons, papers, lamination, tape, wooden boxes etc.",
+      longDesc: "Omni Movers offer quick and affordable shifting services to families and individuals to relieve them from the burden of moving involved in relocation. Every relocation move from simple to most demanding requires experts to handle the service effectively. For this reason, the complete packing process is done under the supervision of experts. Our staff members work tirelessly to ensure that the items are perfectly packed and don’t get damaged during transportation.\n\nHousehold relocation services require an entire package of goods including initial inspection to the final settings at the new location. In order to maintain safety of the goods, we make sure to use superior quality packaging materials such as cartons, papers, lamination, tape, wooden boxes etc.\n\nWe provide tailored services as per the customer’s needs. Partial packing is offered in case the client feels that he can pack everything on his own except for a few articles. Also, we provide the option to select between door to door or door to terminal service. However, the conditions must be clearly specified beforehand.",
       icon: <Home size={28} />,
       img: "/s.jpg",
       points: ["Supervised Packing", "Superior Materials", "Initial Inspection", "Tailored Services"]
@@ -26,29 +26,29 @@ export default function ServicesPage() {
     {
       id: "office-moving",
       title: "Office Moving/Shifting",
-      desc: "Comprehensive office relocation services designed to minimize downtime and ensure a smooth business transition.",
-      longDesc: "Our office moving services are tailored to meet the unique needs of corporate clients. We handle IT equipment, documents, and office furniture with extreme care. Every move is planned meticulously to ensure that your business operations are back to normal as quickly as possible.\n\nWe provide tailored services as per the customer’s needs. Partial packing is offered in case the client feels that he can pack everything on his own except for a few articles. Also, we provide the option to select between door to door or door to terminal service.",
+      desc: "Omni Movers offer quick and affordable shifting services to families and individuals to relieve them from the burden of moving involved in relocation.",
+      longDesc: "Omni Movers offer quick and affordable shifting services to families and individuals to relieve them from the burden of moving involved in relocation. Every relocation move from simple to most demanding requires experts to handle the service effectively. For this reason, the complete packing process is done under the supervision of experts. Our staff members work tirelessly to ensure that the items are perfectly packed and don’t get damaged during transportation.\n\nHousehold relocation services require an entire package of goods including initial inspection to the final settings at the new location. In order to maintain safety of the goods, we make sure to use superior quality packaging materials such as cartons, papers, lamination, tape, wooden boxes etc.\n\nWe provide tailored services as per the customer’s needs. Partial packing is offered in case the client feels that he can pack everything on his own except for a few articles. Also, we provide the option to select between door to door or door to terminal service. However, the conditions must be clearly specified beforehand.",
       icon: <Truck size={28} />,
       img: "/s1.jpg",
-      points: ["IT Equipment Handling", "Furniture Disassembly", "Document Security", "Minimal Downtime"]
+      points: ["Expert Corporate Move", "Dedicated Moving Team", "Superior Packing", "Tailored Shifting Plans"]
     },
     {
       id: "warehousing",
-      title: "Warehousing & Storage",
-      desc: "Safe and secure storage solutions for your valuable belongings, equipped with 24/7 monitoring.",
-      longDesc: "We are one of the reliable warehousing and storage service providers. We have adequate space for storage of all types of stuff. We understand the importance of your things and thus our endeavours are focused on keeping them with utmost security. Things are kept safely and delivered to desired destinations while taking all the safety measures.\n\nOur warehouse is located at a safe place, and offers most advanced warehousing and storage services. We render round the clock security service thus ensuring that there is no chance of damage, scratch or loss on your items. We are accountable for all your things.",
+      title: "Warehousing",
+      desc: "We are one of the reliable warehousing and storage service providers. We have adequate space for storage of all types of stuff.",
+      longDesc: "We are one of the reliable warehousing and storage service providers. We have adequate space for storage of all types of stuff. We understand the importance of your things and thus our endeavours are focused on keeping them with utmost security. Things are kept safely and delivered to desired destinations while taking all the safety measures.\n\nOur trained team of professionals ensure that the freight is delivered to you with ultra-care. We have expertise in handling distinct types of items. We provide space to store nearly anything from official documents to your precious household items. Our warehouse is located at the safe place, and offers most advanced warehousing and storage services. We render round the clock security service thus ensuring that there is no chance of damage, scratch or loss on your items. We are accountable for all your things.",
       icon: <Box size={28} />,
       img: "/s3.jpg",
-      points: ["24/7 Security", "Climate Controlled", "Adequate Space", "Inventory Management"]
+      points: ["Utmost Security Storage", "24/7 Surveillance", "Adequate Storage Space", "Accountable Protection"]
     },
     {
       id: "car-shifting",
-      title: "Car & Vehicle Shifting",
-      desc: "Specialized vehicle carrier services to transport your car safely to any destination in India.",
-      longDesc: "Omni Movers offer quick and affordable shifting services to relieve you from the burden of moving your vehicles. Our staff members work tirelessly to ensure that the items are perfectly packed and don’t get damaged during transportation.\n\nHousehold relocation services require an entire package of goods including initial inspection to the final settings at the new location. In order to maintain safety of the goods, we make sure to use superior quality packaging materials such as cartons, papers, lamination, tape, wooden boxes etc.",
+      title: "Car Shifting",
+      desc: "Omni Movers offer quick and affordable shifting services to families and individuals to relieve them from the burden of moving involved in relocation.",
+      longDesc: "Omni Movers offer quick and affordable shifting services to families and individuals to relieve them from the burden of moving involved in relocation. Every relocation move from simple to most demanding requires experts to handle the service effectively. For this reason, the complete packing process is done under the supervision of experts. Our staff members work tirelessly to ensure that the items are perfectly packed and don’t get damaged during transportation.\n\nHousehold relocation services require an entire package of goods including initial inspection to the final settings at the new location. In order to maintain safety of the goods, we make sure to use superior quality packaging materials such as cartons, papers, lamination, tape, wooden boxes etc.\n\nWe provide tailored services as per the customer’s needs. Partial packing is offered in case the client feels that he can pack everything on his own except for a few articles. Also, we provide the option to select between door to door or door to terminal service. However, the conditions must be clearly specified beforehand.",
       icon: <Car size={28} />,
       img: "/s4.jpg",
-      points: ["Scratch-free Transport", "Insurance Coverage", "Timely Delivery", "Professional Carriers"]
+      points: ["Expert Vehicle Transit", "Premium Quality Covers", "Scratch-free Protection", "Door to Door Service"]
     }
   ];
 
@@ -109,7 +109,7 @@ export default function ServicesPage() {
                     {service.title}
                   </h2>
                   <div className="space-y-6">
-                    <p className="text-slate-600 leading-relaxed text-sm whitespace-pre-line">
+                    <p className="text-slate-600 leading-relaxed text-sm whitespace-pre-line font-medium">
                       {service.longDesc}
                     </p>
                     <div className="grid grid-cols-2 gap-4 pt-4">

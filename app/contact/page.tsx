@@ -94,9 +94,9 @@ export default function ContactPage() {
               {[
                 {
                   title: "Contact Number",
-                  values: ["+91-9855452352", "+91 7015665848"],
+                  values: ["+91 70156 65848"],
                   icon: <Phone size={24} className="text-orange-600" />,
-                  href: "tel:+919855452352"
+                  href: "tel:+917015665848"
                 },
                 {
                   title: "Email Address",
@@ -146,7 +146,7 @@ export default function ContactPage() {
 
               <div className="pt-6">
                 <a 
-                  href="https://wa.me/919855452352" 
+                  href="https://wa.me/917015665848" 
                   className="w-full flex items-center justify-center gap-4 py-5 bg-green-500 text-white rounded-3xl font-black text-xl hover:bg-green-600 transition-all shadow-xl shadow-green-500/20"
                   target="_blank"
                   rel="noopener noreferrer"

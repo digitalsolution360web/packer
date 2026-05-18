@@ -88,8 +88,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase text-slate-500 mb-1">Phone Number</p>
-                  <a href="tel:+919855452352" className="text-slate-200 font-bold hover:text-orange-500 transition-colors">
-                    +91-9855452352
+                  <a href="tel:+917015665848" className="text-slate-200 font-bold hover:text-orange-500 transition-colors">
+                    +91 70156 65848
                   </a>
                 </div>
               </div>

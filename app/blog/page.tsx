@@ -6,18 +6,11 @@ import { Calendar, User, ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { blogPosts } from "./data";
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5 }
-};
-
 export default function BlogPage() {
   return (
-    <div className="pt-24 min-h-screen bg-white">
+    <div className="pt-24 min-h-screen bg-white text-slate-900 selection:bg-orange-600 selection:text-white">
       {/* Page Header */}
-      <section className="bg-slate-950 py-16 text-white relative overflow-hidden">
+      <section className="bg-slate-950 py-20 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/4 h-full opacity-10">
           <Image src="/blog.jpeg" alt="Background" fill className="object-cover" />
         </div>
@@ -25,18 +18,18 @@ export default function BlogPage() {
           <motion.h1 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-5xl font-black font-outfit"
+            className="text-4xl md:text-5xl font-black font-outfit leading-tight"
           >
             Insights & <span className="text-orange-500">Updates</span>
           </motion.h1>
-          <p className="mt-4 text-slate-400 max-w-2xl font-medium">
+          <p className="mt-4 text-slate-400 max-w-2xl font-medium text-sm md:text-base leading-relaxed">
             Stay updated with the latest trends, guides, and news from the world of logistics and relocation.
           </p>
         </div>
       </section>
 
       {/* Blog List */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post, i) => (
@@ -55,11 +48,11 @@ export default function BlogPage() {
                     fill 
                     className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
-                  <div className="absolute top-6 left-6 px-4 py-1 bg-white/90 backdrop-blur text-orange-600 text-[10px] font-black uppercase tracking-widest rounded-full">
+                  <div className="absolute top-6 left-6 px-4 py-1.5 bg-orange-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
                     {post.category}
                   </div>
                 </div>
-                <div className="p-10 flex flex-col flex-grow">
+                <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-4 text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-4">
                     <div className="flex items-center gap-1.5">
                       <Calendar size={12} className="text-orange-500" />
@@ -70,10 +63,10 @@ export default function BlogPage() {
                       {post.author}
                     </div>
                   </div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-4 line-clamp-2 font-outfit group-hover:text-orange-600 transition-colors">
+                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 line-clamp-2 font-outfit group-hover:text-orange-600 transition-colors leading-snug">
                     {post.title}
                   </h4>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3">
+                  <p className="text-slate-500 text-xs md:text-sm leading-relaxed mb-6 line-clamp-3 font-semibold">
                     {post.excerpt}
                   </p>
                   <div className="mt-auto pt-6 border-t border-slate-50">
@@ -83,7 +76,7 @@ export default function BlogPage() {
                     >
                       Read More 
                       <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover/btn:bg-orange-600 group-hover/btn:text-white transition-all">
-                        <ArrowRight size={16} />
+                        <ArrowRight size={14} />
                       </div>
                     </Link>
                   </div>
@@ -94,12 +87,12 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Pagination (Visual only for now) */}
-      <section className="pb-20">
+      {/* Pagination */}
+      <section className="pb-20 bg-white">
         <div className="container mx-auto px-4 flex justify-center gap-2">
-          <button className="w-10 h-10 rounded-xl bg-orange-600 text-white font-bold flex items-center justify-center shadow-lg">1</button>
-          <button className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 font-bold flex items-center justify-center hover:bg-slate-100 transition-all">2</button>
-          <button className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 font-bold flex items-center justify-center hover:bg-slate-100 transition-all">
+          <button className="w-10 h-10 rounded-xl bg-orange-600 text-white font-bold flex items-center justify-center shadow-lg shadow-orange-600/25">1</button>
+          <button className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 font-bold flex items-center justify-center hover:bg-slate-100 transition-all border border-slate-200">2</button>
+          <button className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 font-bold flex items-center justify-center hover:bg-slate-100 transition-all border border-slate-200">
             <ChevronRight size={18} />
           </button>
         </div>
