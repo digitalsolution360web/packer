@@ -162,12 +162,13 @@ export default function ContactPage() {
 
       {/* Map Section Placeholder */}
       <section className="pb-20 px-4">
-        <div className="container mx-auto h-[400px] rounded-[3rem] overflow-hidden border-8 border-slate-50 shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-700">
+        <div className="container mx-auto h-[450px] rounded-[3rem] overflow-hidden border-8 border-slate-50 shadow-2xl relative grayscale hover:grayscale-0 transition-all duration-700">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109066.4011409395!2d75.503378!3d31.326015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a5747a703b5%3A0x2b3ff994d4c85172!2sJalandhar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1715780000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.7678757624853!2d75.56423649999999!3d31.3377831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5b756eeb65bd%3A0xa345020f721f7614!2sOmni%20Logistics%20Packers%20and%20Movers%20Jalandhar%20%7C%20Best%20Packers%20and%20Movers%20in%20Jalandhar%20%7C%20Movers%20and%20Packers%20In%20Jalandhar!5e0!3m2!1sen!2sin!4v1779096472373!5m2!1sen!2sin" 
             className="w-full h-full border-0" 
             allowFullScreen={true} 
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>

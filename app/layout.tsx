@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, X, Menu, Globe, MessageCircle, ArrowUp, CheckCircle2 } from "lucide-react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import MobileStickyContact from "./components/MobileStickyContact";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,9 +15,6 @@ const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
 });
-
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Omni Logistics - Best Packers and Movers in Jalandhar",
@@ -30,10 +28,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
-      <body className="antialiased bg-white text-slate-900 font-sans p-0 m-0">
+      <head>
+        <link 
+          rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossOrigin="anonymous" 
+          referrerPolicy="no-referrer" 
+        />
+      </head>
+      <body className="antialiased bg-white text-slate-900 font-sans p-0 m-0 pb-16 lg:pb-0">
         <Navbar />
         {children}
         <Footer />
+        <FloatingWhatsApp />
+        <MobileStickyContact />
       </body>
     </html>
   );

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, Clock, ArrowUp, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, Clock, ArrowUp, CheckCircle2, MapPin } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -102,6 +102,21 @@ export default function Footer() {
                   <a href="mailto:info@packersandmoversjalandhar.com" className="text-slate-200 font-bold hover:text-orange-500 transition-colors text-xs break-all">
                     info@packersandmoversjalandhar.com
                   </a>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-600/10 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-orange-500" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-black uppercase text-slate-500 mb-1">Office Address</p>
+                  <p className="text-slate-300 text-xs font-semibold leading-relaxed">
+                    150/2 Banda Bahadur Nagar, Near Ram Mandir, Sangat Colony, Jalandhar Punjab 144001
+                  </p>
+                  <p className="text-slate-500 text-[10px] my-1">— Branch —</p>
+                  <p className="text-slate-300 text-xs font-semibold leading-relaxed">
+                    H-283, Near DAV College, Hathi Gate, Katra Ahluwalia, Amritsar - 143001
+                  </p>
                 </div>
               </div>
             </div>
