@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#020617] text-white pt-24 pb-12 relative overflow-hidden">
+    <footer className="bg-[#020617] text-white pt-16 pb-8 relative overflow-hidden">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -24,9 +24,9 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand Column */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <Image src="/Logo.png" alt="Logo" width={180} height={60} className="brightness-0 invert h-12 w-auto" />
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs font-medium">
               At Omni Logistics, we provide hassle-free shifting services using premium materials. Your trust is our priority.
@@ -46,8 +46,8 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <div>
-            <h4 className="text-lg font-black mb-8 font-outfit uppercase tracking-widest text-orange-500">Quick Links</h4>
-            <ul className="space-y-4">
+            <h4 className="text-base font-black mb-6 font-outfit uppercase tracking-widest text-orange-500">Quick Links</h4>
+            <ul className="space-y-3">
               {[
                 { name: "About Us", href: "/about" },
                 { name: "Our Services", href: "/services" },
@@ -67,8 +67,8 @@ export default function Footer() {
 
           {/* Our Services Column */}
           <div>
-            <h4 className="text-lg font-black mb-8 font-outfit uppercase tracking-widest text-orange-500">Our Services</h4>
-            <ul className="space-y-4">
+            <h4 className="text-base font-black mb-6 font-outfit uppercase tracking-widest text-orange-500">Our Services</h4>
+            <ul className="space-y-3">
               {["Home Shifting", "Office Relocation", "Warehousing", "Car Transportation", "Bike Shifting"].map((service, i) => (
                 <li key={i} className="text-slate-400 hover:text-white transition-colors cursor-pointer text-sm font-medium flex items-center gap-2">
                   <CheckCircle2 size={14} className="text-orange-600" />
@@ -80,41 +80,41 @@ export default function Footer() {
 
           {/* Contact Info Column */}
           <div>
-            <h4 className="text-lg font-black mb-8 font-outfit uppercase tracking-widest text-orange-500">Contact Us</h4>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-600/10 flex items-center justify-center shrink-0">
-                  <Phone size={18} className="text-orange-500" />
+            <h4 className="text-base font-black mb-6 font-outfit uppercase tracking-widest text-orange-500">Contact Us</h4>
+            <div className="space-y-3">
+              <div className="flex gap-3">
+                <div className="w-9 h-9 rounded-xl bg-orange-600/10 flex items-center justify-center shrink-0">
+                  <Phone size={16} className="text-orange-500" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase text-slate-500 mb-1">Phone Number</p>
-                  <a href="tel:+917015665848" className="text-slate-200 font-bold hover:text-orange-500 transition-colors">
+                  <p className="text-[9px] font-black uppercase text-slate-500 mb-0.5">Phone Number</p>
+                  <a href="tel:+917015665848" className="text-slate-200 text-[13px] font-bold hover:text-orange-500 transition-colors">
                     +91 70156 65848
                   </a>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-600/10 flex items-center justify-center shrink-0">
-                  <Mail size={18} className="text-orange-500" />
+              <div className="flex gap-3">
+                <div className="w-9 h-9 rounded-xl bg-orange-600/10 flex items-center justify-center shrink-0">
+                  <Mail size={16} className="text-orange-500" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase text-slate-500 mb-1">Email Support</p>
-                  <a href="mailto:info@packersandmoversjalandhar.com" className="text-slate-200 font-bold hover:text-orange-500 transition-colors text-xs break-all">
+                  <p className="text-[9px] font-black uppercase text-slate-500 mb-0.5">Email Support</p>
+                  <a href="mailto:info@packersandmoversjalandhar.com" className="text-slate-200 text-[13px] font-bold hover:text-orange-500 transition-colors break-all">
                     info@packersandmoversjalandhar.com
                   </a>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-600/10 flex items-center justify-center shrink-0">
-                  <MapPin size={18} className="text-orange-500" />
+              <div className="flex gap-3">
+                <div className="w-9 h-9 rounded-xl bg-orange-600/10 flex items-center justify-center shrink-0">
+                  <MapPin size={16} className="text-orange-500" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase text-slate-500 mb-1">Office Address</p>
-                  <p className="text-slate-300 text-xs font-semibold leading-relaxed">
+                  <p className="text-[9px] font-black uppercase text-slate-500 mb-0.5">Office Address</p>
+                  <p className="text-slate-300 text-[11px] font-semibold leading-snug">
                     150/2 Banda Bahadur Nagar, Near Ram Mandir, Sangat Colony, Jalandhar Punjab 144001
                   </p>
-                  <p className="text-slate-500 text-[10px] my-1">— Branch —</p>
-                  <p className="text-slate-300 text-xs font-semibold leading-relaxed">
+                  <p className="text-slate-500 text-[9px] my-0.5">— Branch —</p>
+                  <p className="text-slate-300 text-[11px] font-semibold leading-snug">
                     H-283, Near DAV College, Hathi Gate, Katra Ahluwalia, Amritsar - 143001
                   </p>
                 </div>
@@ -124,18 +124,29 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-xs font-medium">
-            © 2026 <span className="text-white">Omni Logistics</span>. All Rights Reserved.
-          </p>
-          <div className="flex items-center gap-8">
+        <div className="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <p className="text-slate-500 text-xs font-medium">
+              © 2026 <span className="text-white">Omni Logistics</span>. All Rights Reserved.
+            </p>
+            <a
+              href="https://www.digitalsolution360.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#020617] border border-white hover:border-blue-500 transition-colors"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#3b82f6]"></span>
+              <span className="text-[#3b82f6] text-[11px] sm:text-xs font-semibold">Design by Digital Solution 360</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-6 sm:gap-8">
             <span className="text-slate-500 text-xs flex items-center gap-2">
               <Clock size={14} className="text-orange-600" />
               Available 24/7
             </span>
             <button
               onClick={scrollToTop}
-              className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-orange-600 transition-all group"
+              className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-orange-600 transition-all group shrink-0"
             >
               <ArrowUp size={18} className="group-hover:-translate-y-1 transition-transform" />
             </button>
