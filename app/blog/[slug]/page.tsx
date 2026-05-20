@@ -79,6 +79,17 @@ export default function BlogDetailPage() {
   let i = 0;
   while (i < faqRaw.length) {
     const current = faqRaw[i].trim();
+    
+    // Check if Q and A are in the same block (separated by newline instead of blank line)
+    const lines = current.split("\n").map(l => l.trim()).filter(Boolean);
+    if (lines.length >= 2 && lines[0].endsWith("?")) {
+      const question = lines[0];
+      const answer = lines.slice(1).join("<br/>");
+      faqs.push({ question, answer });
+      i++;
+      continue;
+    }
+
     if (current.endsWith("?") || (current.includes("?") && current.split("\n").length === 1)) {
       const question = current;
       const next = faqRaw[i + 1] ? faqRaw[i + 1].trim() : "";
@@ -121,9 +132,7 @@ export default function BlogDetailPage() {
         return (
           <div key={idx} className="my-5 pl-4 border-l-2 border-slate-200 space-y-2">
             {lines.map((line, li) => (
-              <p key={li} className="text-slate-700 text-sm md:text-base font-semibold leading-relaxed">
-                {line.replace(/^[-•]\s*/, "").replace(/^\d+\.\s*/, "")}
-              </p>
+              <p key={li} className="text-slate-700 text-sm md:text-base font-semibold leading-relaxed" dangerouslySetInnerHTML={{ __html: line.replace(/^[-•]\s*/, "").replace(/^\d+\.\s*/, "") }} />
             ))}
           </div>
         );
@@ -134,9 +143,7 @@ export default function BlogDetailPage() {
         return (
           <div key={idx} className="my-5 space-y-2">
             {lines.map((line, li) => (
-              <p key={li} className="text-slate-600 text-sm md:text-base font-semibold leading-relaxed">
-                {line}
-              </p>
+              <p key={li} className="text-slate-600 text-sm md:text-base font-semibold leading-relaxed" dangerouslySetInnerHTML={{ __html: line }} />
             ))}
           </div>
         );
@@ -144,9 +151,7 @@ export default function BlogDetailPage() {
 
       // Regular paragraph
       return (
-        <p key={idx} className="text-slate-600 text-sm md:text-base font-semibold leading-relaxed mb-4">
-          {trimmed}
-        </p>
+        <p key={idx} className="text-slate-600 text-sm md:text-base font-semibold leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: trimmed }} />
       );
     });
   };
@@ -224,9 +229,7 @@ export default function BlogDetailPage() {
                                 className="overflow-hidden"
                               >
                                 <div className="px-6 py-5 bg-white border-t border-slate-100">
-                                  <p className="text-slate-600 text-sm md:text-base font-semibold leading-relaxed pl-6">
-                                    {faq.answer}
-                                  </p>
+                                  <p className="text-slate-600 text-sm md:text-base font-semibold leading-relaxed pl-6" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                                   {faq.list && faq.list.length > 0 && (
                                     <ul className="mt-3 pl-8 space-y-2">
                                       {faq.list.map((item, li) => (
