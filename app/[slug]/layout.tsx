@@ -1,4 +1,4 @@
-import { blogPosts } from "../data";
+import { blogPosts } from "../blog/data";
 import type { Metadata } from "next";
 
 interface Props {

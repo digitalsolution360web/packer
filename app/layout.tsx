@@ -19,6 +19,21 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Omni Logistics - Best Packers and Movers in Jalandhar",
   description: "Omni Logistics offers professional home shifting, office relocation, and packing services in Jalandhar, Kapurthala, Hoshiarpur, and nearby areas.",
+  icons: {
+    icon: "/favicon.webp",
+  },
+  openGraph: {
+    title: "Omni Logistics - Best Packers and Movers in Jalandhar",
+    description: "Omni Logistics offers professional home shifting, office relocation, and packing services in Jalandhar, Kapurthala, Hoshiarpur, and nearby areas.",
+    images: [
+      {
+        url: "/home1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Omni Logistics Banner",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

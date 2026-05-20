@@ -88,8 +88,11 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-[9px] font-black uppercase text-slate-500 mb-0.5">Phone Number</p>
-                  <a href="tel:+917015665848" className="text-slate-200 text-[13px] font-bold hover:text-orange-500 transition-colors">
+                  <a href="tel:+917015665848" className="text-slate-200 text-[13px] font-bold hover:text-orange-500 transition-colors block">
                     +91 70156 65848
+                  </a>
+                  <a href="tel:+919855452352" className="text-slate-200 text-[13px] font-bold hover:text-orange-500 transition-colors block mt-1">
+                    +91 98554 52352
                   </a>
                 </div>
               </div>
@@ -113,7 +116,9 @@ export default function Footer() {
                   <p className="text-slate-300 text-[11px] font-semibold leading-snug">
                     150/2 Banda Bahadur Nagar, Near Ram Mandir, Sangat Colony, Jalandhar Punjab 144001
                   </p>
-                  <p className="text-slate-500 text-[9px] my-0.5">— Branch —</p>
+                  <p className="text-[9px] font-black uppercase text-slate-500 mt-3 mb-0.5 flex items-center gap-1">
+                    <MapPin size={10} className="text-orange-500" /> Branch Address
+                  </p>
                   <p className="text-slate-300 text-[11px] font-semibold leading-snug">
                     H-283, Near DAV College, Hathi Gate, Katra Ahluwalia, Amritsar - 143001
                   </p>

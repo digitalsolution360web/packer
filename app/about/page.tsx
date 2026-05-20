@@ -44,8 +44,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="lg:w-1/2"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-slate-50">
-                <Image src="/home.png" alt="Who We Are" width={600} height={450} className="w-full h-auto" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-slate-50 h-[300px] md:h-[400px]">
+                <Image src="/home.png" alt="Who We Are" fill className="object-cover object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
               </div>
             </motion.div>

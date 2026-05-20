@@ -71,7 +71,7 @@ export default function BlogPage() {
                   </p>
                   <div className="mt-auto pt-6 border-t border-slate-50">
                     <Link 
-                      href={`/blog/${post.slug}`}
+                      href={`/${post.slug}`}
                       className="text-sm font-bold text-slate-900 flex items-center justify-between group/btn"
                     >
                       Read More 

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, ArrowLeft, Share2, Tag, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { blogPosts } from "../data";
+import { blogPosts } from "../blog/data";
 
 interface FAQItem {
   question: string;
@@ -159,11 +159,7 @@ export default function BlogDetailPage() {
   return (
     <div className="pt-24 min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-end py-16">
-        <div className="absolute inset-0 z-0">
-          <Image src={post.img} alt={post.title} fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
-        </div>
+      <section className="relative h-[50vh] min-h-[350px] flex items-end py-16 bg-slate-900">
         <div className="container mx-auto px-4 relative z-10 text-white">
           <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 mb-6 hover:text-orange-300 transition-colors group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
@@ -189,6 +185,9 @@ export default function BlogDetailPage() {
 
             {/* Main Article */}
             <div className="lg:w-8/12">
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-10 shadow-lg border border-slate-100">
+                <Image src={post.img} alt={post.title} fill className="object-cover" />
+              </div>
               {/* Body */}
               <div className="space-y-2">
                 {renderArticleBody(articleParagraphs)}
@@ -273,7 +272,7 @@ export default function BlogDetailPage() {
                 <h4 className="text-lg font-black text-slate-900 mb-6 font-outfit">Recent Posts</h4>
                 <div className="space-y-5">
                   {blogPosts.filter(p => p.slug !== post.slug).slice(0, 4).map(recent => (
-                    <Link key={recent.slug} href={`/blog/${recent.slug}`} className="flex gap-4 group">
+                    <Link key={recent.slug} href={`/${recent.slug}`} className="flex gap-4 group">
                       <div className="w-18 h-16 relative rounded-xl overflow-hidden shrink-0 border border-slate-100" style={{ width: 64 }}>
                         <Image src={recent.img} alt={recent.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>
