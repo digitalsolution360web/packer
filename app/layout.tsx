@@ -17,14 +17,14 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Omni Logistics Packers and Movers in Jalandhar | Affordable Shifting Services",
-  description: "Omni Logistics Packers and Movers in Jalandhar offers safe, affordable, and professional home shifting, office relocation, vehicle transportation, packing, and moving services with timely delivery.",
+  title: "Best Packers and Movers in Jalandhar | Omni Logistics",
+  description: "Looking for reliable house shifting services in Jalandhar? Omni Logistics offers insured packing, loading, and moving services. Get a free quote today!",
   icons: {
     icon: "/favicon.webp",
   },
   openGraph: {
-    title: "Omni Logistics Packers and Movers in Jalandhar | Affordable Shifting Services",
-    description: "Omni Logistics Packers and Movers in Jalandhar offers safe, affordable, and professional home shifting, office relocation, vehicle transportation, packing, and moving services with timely delivery.",
+    title: "Best Packers and Movers in Jalandhar | Omni Logistics",
+    description: "Looking for reliable house shifting services in Jalandhar? Omni Logistics offers insured packing, loading, and moving services. Get a free quote today!",
     images: [
       {
         url: "/home1.jpg",

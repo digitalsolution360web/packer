@@ -23,7 +23,8 @@ import {
   Shield,
   Calendar,
   Sparkles,
-  Quote
+  Quote,
+  CheckCircle
 } from "lucide-react";
 import { blogPosts } from "./blog/data";
 
@@ -42,6 +43,7 @@ const staggerContainer = {
 
 export default function Home() {
   const [activeLocation, setActiveLocation] = useState(0);
+  const [activeFaq, setActiveFaq] = useState<number | null>(0);
 
   const locations = [
     {
@@ -73,49 +75,50 @@ export default function Home() {
 
   const services = [
     {
-      title: "Home Shifting Services in Jalandhar",
+      title: "House Shifting Services in Jalandhar",
       icon: <HomeIcon className="w-7 h-7 text-orange-500" />,
       paragraphs: [
-        "Our home shifting services Jalandhar are efficient and trustworthy for all types of home or office-related relocations. We ensure that clients get specialized and customized Residential house shifting services Jalandhar without any delay from our end.",
-        "Also, Omni Packers & Movers ensures every transition is under control. We never go beyond our regulations that may affect our clients’ trust."
+        "We cover everything from supplying premium multi-layer packaging materials. Our team systematically labels your cartons for effortless unpacking at your new home.",
+        "Our experts handle every detail to ensure a smooth transition to your new residence."
       ],
       color: "border-orange-500/20 hover:border-orange-500/80"
     },
     {
-      title: "Office Relocation Movers in Jalandhar",
+      title: "Corporate & Office Shifting Services in Jalandhar",
       icon: <Briefcase className="w-7 h-7 text-blue-500" />,
       paragraphs: [
-        "There is no way we will give you the headache of transportation. The team is capable enough to handle the office relocation tasks. We have the elite force that can do the job elegantly. Our service for office relocation movers in Jalandhar isn’t a choice, but a commitment to quality.",
-        "Whether you own an IT office or offer banking services, the transportation will be easier and effortless with Omni Packers & Movers."
+        "We safely pack, label, and transport IT infrastructure, including all the heavy to light components, effortlessly within our specialized office shifting services in Jalandhar.",
+        "We prioritize zero business downtime and efficient execution during weekends or off-hours."
       ],
       color: "border-blue-500/20 hover:border-blue-500/80"
     },
     {
-      title: "Packing and Unpacking Services",
-      icon: <Package className="w-7 h-7 text-emerald-500" />,
+      title: "Premium Home Relocation Services in Jalandhar",
+      icon: <Sparkles className="w-7 h-7 text-emerald-500" />,
       paragraphs: [
-        "Without professionalism, it is impossible to run a successful packing and moving service in Jalandhar. No one can offer the best packing services in Jalandhar as we do.",
-        "The reasons are connected with our activities as we use high-grade packaging materials, such as bubble wrap, sturdy boxes, and corrugated sheets. So, users don’t have to worry about the breakage or mishandling of their precious packaged items anymore."
+        "Whether a big house or a small apartment, our home relocation services in Jalandhar work for all types. We take care of your luxury decor, artwork, and high-end electronics.",
+        "Specialized handling for high-value items ensures everything arrives in pristine condition."
       ],
       color: "border-emerald-500/20 hover:border-emerald-500/80"
     },
     {
-      title: "Loading and Unloading Services",
-      icon: <Truck className="w-7 h-7 text-purple-500" />,
+      title: "Domestic Relocation Services in Jalandhar",
+      icon: <MapPin className="w-7 h-7 text-purple-500" />,
       paragraphs: [
-        "There is no chance of heavy lifting or handling of heavier packaged products without professionalism. Omni prioritizes professional loading techniques and unloading processes. We take care of everything without damaging the internal packaged items."
+        "Leaving Jalandhar, Punjab? Don’t Worry! Our expansive domestic relocation services in Jalandhar connect you to a nationwide network.",
+        "Safe and secure long-distance transit for all your household and commercial goods."
       ],
       color: "border-purple-500/20 hover:border-purple-500/80"
     }
   ];
 
   const provisions = [
-    { title: "Loading", desc: "Expert staff handling items with maximum safety.", icon: <ArrowRight className="w-5 h-5 text-orange-500" /> },
-    { title: "Moving Locally", desc: "Fast and reliable transit within your local region.", icon: <MapPin className="w-5 h-5 text-orange-500" /> },
-    { title: "Storage", desc: "Safe, secure, and monitored units for temporary holds.", icon: <Boxes className="w-5 h-5 text-orange-500" /> },
-    { title: "Commercial Relocation", desc: "Systematic shifting designed for large & small enterprises.", icon: <Briefcase className="w-5 h-5 text-orange-500" /> },
-    { title: "Packaging", desc: "Multi-layered protective materials for high-value items.", icon: <Package className="w-5 h-5 text-orange-500" /> },
-    { title: "Ware Housing", desc: "Spacious and clean warehousing with complete surveillance.", icon: <Warehouse className="w-5 h-5 text-orange-500" /> },
+    { title: "Furniture Shifting", desc: "Safe dismantling and scratch-proof bubble wrapping for sofas, beds, and dining sets.", icon: <Settings className="w-5 h-5 text-orange-500" /> },
+    { title: "Car Transportation", desc: "Enclosed, specialized car carriers with wheel-locking safety for Sedans and SUVs.", icon: <Truck className="w-5 h-5 text-orange-500" /> },
+    { title: "Bike Transport", desc: "Multi-layer foam padding to prevent minor scratches for all types of bikes.", icon: <ArrowRight className="w-5 h-5 text-orange-500" /> },
+    { title: "Commercial Relocation", desc: "Systematic shifting designed for large & small enterprises with zero downtime.", icon: <Briefcase className="w-5 h-5 text-orange-500" /> },
+    { title: "Premium Packaging", desc: "Multi-layered protective materials for high-value items and electronics.", icon: <Package className="w-5 h-5 text-orange-500" /> },
+    { title: "Warehousing", desc: "Spacious and clean warehousing with complete surveillance and item tracking.", icon: <Warehouse className="w-5 h-5 text-orange-500" /> },
   ];
 
   return (
@@ -146,16 +149,16 @@ export default function Home() {
                 Trusted & Affordable Logistics Services
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight font-outfit tracking-tight">
-                Omni Logistics Packers <br className="hidden sm:inline" />
-                and Movers <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">in Jalandhar</span>
+                Welcome to Omni Logistics
+                Professional Packers <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">and Movers in Jalandhar</span>, Punjab
               </h1>
 
               <div className="mt-8 space-y-5 text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl font-medium">
                 <p className="border-l-4 border-orange-500 pl-4 bg-white/5 py-2 pr-2 rounded-r-lg backdrop-blur-sm">
-                  In this busy world, it's hard to trust any random packers or logistics service providers. However, going with Omni Packers & Movers is a game-changing option. We are best not just by words but by our efforts and success rate. As the Best packers and movers in Jalandhar, there is no way clients get disappointed here.
+                  Let’s start with the perfect professional guidance. Bring a fresh and faster start with the most trusted packers and movers in Jalandhar.
                 </p>
                 <p className="text-slate-300">
-                  We organize your belongings, pack them safely, and transport them to their desired place by maintaining transparency. That's why many house owners and businessmen choose our office and home shifting services in Jalandhar.
+                  <a href="https://www.packersandmoversjalandhar.com/services" className="text-orange-400 font-bold hover:text-orange-300 underline decoration-orange-400/50 underline-offset-4 transition-colors">Omni Logistics Packers and Movers in Jalandhar</a> is the one that has spent years building a reputation for absolute reliability and transparency. We do not just transport packaged boxes; we make arrangements to move your beautiful memories and valuable assets with the care they deserve.
                 </p>
               </div>
 
@@ -280,10 +283,15 @@ export default function Home() {
             <div className="inline-block px-3 py-1 bg-orange-500/10 text-orange-400 font-black text-xs uppercase tracking-[0.2em] rounded-md mb-3 border border-orange-500/20">
               Our Process
             </div>
-            <h2 className="text-3xl md:text-4xl font-black mb-6 font-outfit">How We Work</h2>
-            <p className="text-slate-400 text-sm md:text-base leading-relaxed font-medium">
-              We are backed by a well-defined, managed and integrated process. The entire process is done in front of you, it normally involves step-wise division, which is as follows:
-            </p>
+            <h2 className="text-3xl md:text-4xl font-black mb-6 font-outfit">End-to-End Execution: From Packaging to Placement</h2>
+            <div className="space-y-4 text-slate-400 text-sm md:text-base leading-relaxed font-medium">
+              <p>
+                A complete and successful move requires a systematic decision and strategic implementation of every plan. That’s how our experts handle everything, with “A Systematic Workflow”.
+              </p>
+              <p className="text-orange-400 font-bold">
+                Our Professional Packers and Movers in Jalandhar, Punjab, don’t like to stay in a limited or outdated zone. That’s why we follow some simple execution steps:
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
@@ -291,10 +299,10 @@ export default function Home() {
             <div className="hidden lg:block absolute top-1/2 left-4 right-4 h-0.5 bg-gradient-to-r from-orange-500/20 via-orange-500/40 to-orange-500/20 -translate-y-8 -z-10" />
 
             {[
-              { num: "1", title: "Book Your Order", desc: "Easily set up and confirm your booking online or via call." },
-              { num: "2", title: "Pack Your Things", desc: "High-grade packing materials secure your goods completely." },
-              { num: "3", title: "Safe Loading", desc: "Heavy lifting handled by professional loaders & tools." },
-              { num: "4", title: "Safe Delivery", desc: "Punctual delivery directly at your doorstep without damages." }
+              { num: "Step 1", title: "Premium Packing Services", desc: "Our team comes with the best and high-grade bubble wraps, corrugated sheets, foam rolls, and other required materials to pack everything safely." },
+              { num: "Step 2", title: "Secure Loading and Unloading Services in Jalandhar", desc: "Our loading and unloading services in Jalandhar ensure the handling of heavy items. We use professional gear like moving dollies, ramps, and safety straps for better and safer shifting." },
+              { num: "Step 3", title: "Safe Transit & Real-Time Tracking", desc: "We appoint the best and most experienced route professionals who know the best local transit paths. We use well-maintained and closed containers for safer transition." },
+              { num: "Step 4", title: "Unpacking & Layout Setup", desc: "Unload, Unwrap, and Place – we do everything by putting your appliances where you want them in your new space." }
             ].map((step, idx) => (
               <motion.div
                 key={idx}
@@ -304,7 +312,7 @@ export default function Home() {
                 transition={{ delay: idx * 0.15 }}
                 className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 relative text-center group hover:bg-white/10 transition-all hover:border-orange-500/30"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-600 text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
+                <div className="px-4 py-1.5 bg-gradient-to-br from-orange-500 to-amber-600 text-white rounded-lg text-xs font-black mx-auto mb-6 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform inline-block">
                   {step.num}
                 </div>
                 <h3 className="text-lg font-bold mb-3 font-outfit text-white">{step.title}</h3>
@@ -328,11 +336,16 @@ export default function Home() {
               Comprehensive Services
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-slate-950 font-outfit mb-4">
-              Our Packers and Movers Services in Jalandhar
+              Our Core Relocation Services
             </h2>
-            <p className="text-slate-500 text-sm md:text-base leading-relaxed font-semibold">
-              We offer a comprehensive suite of services designed to cover every aspect of your move.
-            </p>
+            <div className="space-y-4 text-slate-500 text-sm md:text-base leading-relaxed font-semibold">
+              <p>
+                Our team is full of experts who offer comprehensive <a href="https://www.packersandmoversjalandhar.com/services" className="text-orange-600 font-bold hover:text-orange-700 underline decoration-orange-500/50 underline-offset-4 transition-colors">packing and moving services in Jalandhar</a> designed to handle every variable of your upcoming move.
+              </p>
+              <p className="text-orange-600">
+                Let’s Discover Our Core Relocation Services
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -381,36 +394,44 @@ export default function Home() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <div className="inline-block px-3 py-1 bg-orange-100 text-orange-600 font-black text-xs uppercase tracking-[0.2em] rounded-md mb-3">
-              What We Provide
+              Specialized Shifting & Asset Logistics
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-slate-950 font-outfit mb-4">
-              Core Amenities & Logistics Offerings
+              Specialized Shifting & Asset Logistics
             </h2>
             <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium">
-              We ensure that our systematic process helps us to achieve utmost customer satisfaction. Our well-organized process makes it easy to deliver with ease.
+              As trusted Local Packers and Movers in Jalandhar, Omni Logistics has other types of special attributes that draw the attention of many, such as
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {provisions.map((prov, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { service: "Furniture Shifting Services in Jalandhar", handle: "Sofas, beds, dining sets, antique wood", benefit: "Safe dismantling and scratch-proof bubble wrapping.", icon: <Settings className="w-6 h-6" /> },
+              { service: "Car Transportation Services in Jalandhar", handle: "Sedans, SUVs, luxury cars", benefit: "Enclosed, specialized car carriers with wheel-locking safety.", icon: <Truck className="w-6 h-6" /> },
+              { service: "Bike Transport Services in Jalandhar", handle: "Scooters, sports bikes, commuters", benefit: "Multi-layer foam padding to prevent minor scratches in transit.", icon: <ArrowRight className="w-6 h-6" /> },
+            ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, scale: 0.98 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-start gap-4 transition-all hover:bg-white hover:shadow-md hover:border-orange-500/20 group"
+                className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-all group"
               >
-                <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
-                  {prov.icon}
+                <div className="bg-slate-900 p-6 text-white group-hover:bg-orange-600 transition-colors">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg font-bold font-outfit">{item.service}</h3>
                 </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 text-base font-outfit mb-1 group-hover:text-orange-600 transition-colors">
-                    {prov.title}
-                  </h3>
-                  <p className="text-slate-500 text-xs leading-relaxed font-medium">
-                    {prov.desc}
-                  </p>
+                <div className="p-6 space-y-4">
+                  <div>
+                    <span className="text-[10px] uppercase font-black text-slate-400 tracking-wider">What We Handle</span>
+                    <p className="text-slate-700 font-bold text-sm mt-1">{item.handle}</p>
+                  </div>
+                  <div className="pt-4 border-t border-slate-100">
+                    <span className="text-[10px] uppercase font-black text-orange-500 tracking-wider">Key Benefit</span>
+                    <p className="text-slate-600 text-sm mt-1 font-medium">{item.benefit}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -528,26 +549,26 @@ export default function Home() {
                 Why Choose Us?
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 font-outfit">
-                Why Choose Omni Logistics Packers and Movers
+                Why Choose Us Over Local Packers and Movers in Jalandhar?
               </h2>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-8 font-medium">
+                Choosing unverified local packers and movers in Jalandhar isn’t a wise choice. This often results in hidden fees or damaged cargo. Omni Logistics sets a higher benchmark:
+              </p>
 
               <div className="grid sm:grid-cols-2 gap-6 mt-8">
                 {[
-                  { title: "Experienced relocation professionals", desc: "Known for their amazing skills and efficiency." },
-                  { title: "High-quality packing materials", desc: "Premium packaging is always our priority." },
-                  { title: "Affordable moving services", desc: "Budget will never be an obstacle during logistics transportation." },
-                  { title: "On-time pickup and delivery", desc: "Maintain punctuality with a continuous team effort and monitoring." },
-                  { title: "Residential & commercial relocation", desc: "Access every region effortlessly." },
-                  { title: "Trusted local movers in Jalandhar", desc: "Become the trusted player in logistics and transportation." },
+                  { title: "Fixed, Transparent Billing", desc: "No extra cost required. Pay exactly what we agreed initially." },
+                  { title: "Fully Insured Goods", desc: "Robust transit insurance options. Best policy against unexpected road incidents." },
+                  { title: "Trained In-House Staff", desc: "Deploy daily-wage laborers. Treat your property with respect." },
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-3 items-start bg-slate-50 p-4 rounded-xl border border-slate-100 hover:border-orange-500/20 transition-all">
-                    <div className="w-6 h-6 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                      <ChevronRight size={14} />
+                  <div key={i} className="flex flex-col gap-3 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-orange-500/20 transition-all">
+                    <div className="inline-flex items-center gap-2">
+                      <div className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center shrink-0">
+                        <CheckCircle size={18} className="text-orange-600" />
+                      </div>
+                      <h4 className="text-base font-black text-slate-900 font-outfit">{item.title}</h4>
                     </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-slate-900 font-outfit mb-1">{item.title}</h4>
-                      <p className="text-slate-500 text-xs leading-relaxed font-semibold">{item.desc}</p>
-                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed font-semibold pl-10 border-l-2 border-orange-500/20">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -666,16 +687,115 @@ export default function Home() {
 
       {/* Blog Section */}
 
+      {/* FAQs Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <div className="inline-block px-3 py-1 bg-orange-100 text-orange-600 font-black text-xs uppercase tracking-[0.2em] rounded-md mb-3">
+              FAQs
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-950 font-outfit mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-slate-500 text-sm md:text-base font-semibold">
+              Get answers to common questions about our packing and moving services in Jalandhar.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {[
+              {
+                q: "What makes Omni Logistics the best choice for office shifting services in Jalandhar?",
+                a: "Two main reasons make Omni Logistics the best – prioritize zero business downtime and reach teamwork for seamless moving and packing services. Also, our team has been executing the final move during weekends or off-hours to protect your operational productivity."
+              },
+              {
+                q: "Do you provide dedicated furniture shifting services in Jalandhar for single items?",
+                a: "Yes, Omni Logistics is all set to deliver comprehensive home relocation services in Jalandhar. Also, furniture shifting services in Jalandhar are included for single, heavy, or high-value items."
+              },
+              {
+                q: "How safe will my vehicle be with your car transportation services in Jalandhar?",
+                a: "Our car transportation services in Jalandhar utilize advanced and specialized services. We keep everything safe with every movement. Stay assured, there will be no external damage during long-distance transit."
+              },
+              {
+                q: "Can I book bike transport services in Jalandhar separately from home shifting?",
+                a: "Being the Best Packers and Movers in Jalandhar, Omni Logistics offers independent bike transport services in Jalandhar for commuters, sports bikes, and scooters."
+              },
+              {
+                q: "Are there any hidden costs not mentioned in the initial moving estimate?",
+                a: "No, not at all! Our professionals keep every detail transparent. That's why we are known for our best Packing and Moving Services in Jalandhar."
+              }
+            ].map((faq, i) => (
+              <div
+                key={i}
+                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                  activeFaq === i
+                    ? "bg-slate-900 border-slate-800 shadow-xl"
+                    : "bg-white border-slate-100 hover:border-orange-500/30"
+                }`}
+              >
+                <button
+                  onClick={() => setActiveFaq(activeFaq === i ? null : i)}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
+                >
+                  <span
+                    className={`text-base md:text-lg font-bold font-outfit transition-colors leading-tight ${
+                      activeFaq === i ? "text-white" : "text-slate-900"
+                    }`}
+                  >
+                    {faq.q}
+                  </span>
+                  <div
+                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                      activeFaq === i
+                        ? "bg-orange-500 text-white rotate-180"
+                        : "bg-orange-50 text-orange-600"
+                    }`}
+                  >
+                    <ChevronRight size={18} />
+                  </div>
+                </button>
+
+                <AnimatePresence>
+                  {activeFaq === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="px-6 pb-6 text-slate-400 text-sm md:text-base leading-relaxed font-medium border-t border-white/5 pt-4">
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Conclusion Section */}
       <section className="py-16 bg-slate-900 border-t border-slate-800 text-white relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-xl md:text-2xl font-black mb-4 font-outfit text-orange-500">
-              Conclusion
+              Bottom Lines: About Omni Logistics Jalandhar
             </h3>
-            <p className="text-slate-300 text-base md:text-lg leading-relaxed font-semibold">
-              Transportation of your vehicles, products, and other precision amenities won’t be that hard anymore. With Omni Logistics Packers and Movers, you get professional-grade transportation services more safely and affordably. Book your slot now!
+            <p className="text-slate-300 text-base md:text-lg leading-relaxed font-semibold mb-6">
+              As Your Trusted Partner for Reliable Relocation in Jalandhar, Omni Logistics handles every single detail so you don't have to.
             </p>
+            <a
+              href="tel:+917015665848"
+              className="text-orange-500 hover:text-orange-400 font-black underline underline-offset-8 decoration-2 transition-all text-xl italic hover:scale-105 inline-block"
+            >
+              Assured and Safer loading and unloading services in Jalandhar – Book Your Slot Now!
+            </a>
           </div>
         </div>
       </section>
