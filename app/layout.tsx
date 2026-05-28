@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { ModalProvider } from "./context/ModalContext";
+import EnquiryModal from "./components/EnquiryModal";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,11 +56,14 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-white text-slate-900 font-sans p-0 m-0 pb-16 lg:pb-0">
-        <Navbar />
-        {children}
-        <Footer />
-        <FloatingWhatsApp />
-        <MobileStickyContact />
+        <ModalProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <FloatingWhatsApp />
+          <MobileStickyContact />
+          <EnquiryModal />
+        </ModalProvider>
       </body>
     </html>
   );

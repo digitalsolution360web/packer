@@ -8,17 +8,17 @@ import { blogPosts } from "./data";
 
 export default function BlogPage() {
   return (
-    <div className="pt-24 min-h-screen bg-white text-slate-900 selection:bg-orange-600 selection:text-white">
+    <div className="pt-0 min-h-screen bg-white text-slate-900 selection:bg-orange-600 selection:text-white">
       {/* Page Header */}
       <section className="bg-slate-950 py-20 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/4 h-full opacity-10">
           <Image src="/blog.jpeg" alt="Background" fill className="object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-5xl font-black font-outfit leading-tight"
+            className="text-4xl md:text-5xl font-black font-outfit leading-tight mt-10"
           >
             Insights & <span className="text-orange-500">Updates</span>
           </motion.h1>
@@ -33,7 +33,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post, i) => (
-              <motion.article 
+              <motion.article
                 key={post.slug}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -42,11 +42,11 @@ export default function BlogPage() {
                 className="bg-white rounded-[2.5rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.02)] hover:shadow-2xl transition-all duration-500 border border-slate-100 group flex flex-col h-full"
               >
                 <div className="h-64 relative overflow-hidden">
-                  <Image 
-                    src={post.img} 
-                    alt={post.title} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-700" 
+                  <Image
+                    src={post.img}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-6 left-6 px-4 py-1.5 bg-orange-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
                     {post.category}
@@ -70,11 +70,11 @@ export default function BlogPage() {
                     {post.excerpt}
                   </p>
                   <div className="mt-auto pt-6 border-t border-slate-50">
-                    <Link 
+                    <Link
                       href={`/${post.slug}`}
                       className="text-sm font-bold text-slate-900 flex items-center justify-between group/btn"
                     >
-                      Read More 
+                      Read More
                       <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover/btn:bg-orange-600 group-hover/btn:text-white transition-all">
                         <ArrowRight size={14} />
                       </div>

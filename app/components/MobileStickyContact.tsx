@@ -1,18 +1,20 @@
 "use client";
 
-import Link from "next/link";
 import { PhoneCall } from "lucide-react";
+import { useModal } from "../context/ModalContext";
 
 export default function MobileStickyContact() {
+  const { openModal } = useModal();
+  
   return (
     <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 h-16 bg-white border-t border-slate-100 flex items-stretch shadow-[0_-8px_30px_rgba(0,0,0,0.08)]">
       {/* 1. Enquiry Now Button - Re-themed with Website's Corporate Orange */}
-      <Link 
-        href="/contact" 
-        className="w-[50%] bg-orange-600 hover:bg-orange-700 text-white font-extrabold flex items-center justify-center text-sm tracking-wider transition-colors uppercase font-outfit px-2"
+      <button 
+        onClick={openModal} 
+        className="w-[50%] bg-orange-600 hover:bg-orange-700 text-white font-extrabold flex items-center justify-center text-sm tracking-wider transition-colors uppercase font-outfit px-2 cursor-pointer"
       >
         Enquiry Now
-      </Link>
+      </button>
 
       {/* 2. WhatsApp Direct Contact - Renders FontAwesome Brand Icon */}
       <a 

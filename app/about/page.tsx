@@ -14,14 +14,14 @@ const fadeInUp = {
 
 export default function AboutPage() {
   return (
-    <div className="pt-24 min-h-screen bg-white">
+    <div className="pt-0 min-h-screen bg-white">
       {/* Page Header */}
-      <section className="bg-slate-950 py-16 text-white relative overflow-hidden">
+      <section className="bg-slate-950 pt-32 pb-16 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
           <Image src="/home.png" alt="Background" fill className="object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-4xl md:text-5xl font-black font-outfit"
@@ -38,7 +38,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -50,7 +50,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -66,7 +66,7 @@ export default function AboutPage() {
                   Our primary concern is customer satisfaction and rendering the best services. It is all possible due to our dedicated team of professionals who make the shifting simpler and convenient. Our skilled staff members ensure that the goods are packed and moved meticulously. Till date we have managed to successfully handle many residential and commercial relocations.
                 </p>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-100">
                 {[
                   "Extensive years of experience",
@@ -132,7 +132,7 @@ export default function AboutPage() {
                 color: "bg-green-600"
               }
             ].map((feature, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 variants={fadeInUp}
                 initial="initial"
@@ -160,8 +160,8 @@ export default function AboutPage() {
           <p className="mb-10 text-orange-50/80 max-w-xl mx-auto text-sm font-medium">
             Our team is ready to help you with your next relocation. Get a professional quote today.
           </p>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 bg-slate-950 text-white rounded-full font-black text-base hover:bg-black transition-all shadow-2xl"
           >
             Get Free Quote <ArrowRight size={18} />

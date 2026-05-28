@@ -404,38 +404,41 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { service: "Furniture Shifting Services in Jalandhar", handle: "Sofas, beds, dining sets, antique wood", benefit: "Safe dismantling and scratch-proof bubble wrapping.", icon: <Settings className="w-6 h-6" /> },
-              { service: "Car Transportation Services in Jalandhar", handle: "Sedans, SUVs, luxury cars", benefit: "Enclosed, specialized car carriers with wheel-locking safety.", icon: <Truck className="w-6 h-6" /> },
-              { service: "Bike Transport Services in Jalandhar", handle: "Scooters, sports bikes, commuters", benefit: "Multi-layer foam padding to prevent minor scratches in transit.", icon: <ArrowRight className="w-6 h-6" /> },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-all group"
-              >
-                <div className="bg-slate-900 p-6 text-white group-hover:bg-orange-600 transition-colors">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-lg font-bold font-outfit">{item.service}</h3>
-                </div>
-                <div className="p-6 space-y-4">
-                  <div>
-                    <span className="text-[10px] uppercase font-black text-slate-400 tracking-wider">What We Handle</span>
-                    <p className="text-slate-700 font-bold text-sm mt-1">{item.handle}</p>
-                  </div>
-                  <div className="pt-4 border-t border-slate-100">
-                    <span className="text-[10px] uppercase font-black text-orange-500 tracking-wider">Key Benefit</span>
-                    <p className="text-slate-600 text-sm mt-1 font-medium">{item.benefit}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="overflow-x-auto rounded-2xl border border-slate-200"
+          >
+            <table className="w-full text-left border-collapse">
+              <thead className="bg-slate-50">
+                <tr>
+                  <th className="p-4 md:p-6 text-sm font-black text-slate-900 border-b border-r border-slate-200 uppercase tracking-wider text-center">Service</th>
+                  <th className="p-4 md:p-6 text-sm font-black text-slate-900 border-b border-r border-slate-200 uppercase tracking-wider text-center">What We Handle</th>
+                  <th className="p-4 md:p-6 text-sm font-black text-slate-900 border-b border-slate-200 uppercase tracking-wider text-center">Key Benefit</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                {[
+                  { service: "Furniture Shifting Services in Jalandhar", handle: "Sofas, beds, dining sets, antique wood", benefit: "Safe dismantling and scratch-proof bubble wrapping." },
+                  { service: "Car Transportation Services in Jalandhar", handle: "Sedans, SUVs, luxury cars", benefit: "Enclosed, specialized car carriers with wheel-locking safety." },
+                  { service: "Bike Transport Services in Jalandhar", handle: "Scooters, sports bikes, commuters", benefit: "Multi-layer foam padding to prevent minor scratches in transit." },
+                ].map((item, i) => (
+                  <tr key={i} className="hover:bg-slate-50/50 transition-colors">
+                    <td className="p-4 md:p-6 border-b border-r border-slate-200 text-sm font-bold text-slate-900 leading-relaxed min-w-[200px]">
+                      {item.service}
+                    </td>
+                    <td className="p-4 md:p-6 border-b border-r border-slate-200 text-sm font-semibold text-slate-800 leading-relaxed min-w-[200px]">
+                      {item.handle}
+                    </td>
+                    <td className="p-4 md:p-6 border-b border-slate-200 text-sm font-semibold text-slate-800 leading-relaxed min-w-[250px]">
+                      {item.benefit}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </motion.div>
         </div>
       </section>
 
@@ -555,23 +558,37 @@ export default function Home() {
                 Choosing unverified local packers and movers in Jalandhar isn’t a wise choice. This often results in hidden fees or damaged cargo. Omni Logistics sets a higher benchmark:
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-6 mt-8">
-                {[
-                  { title: "Fixed, Transparent Billing", desc: "No extra cost required. Pay exactly what we agreed initially." },
-                  { title: "Fully Insured Goods", desc: "Robust transit insurance options. Best policy against unexpected road incidents." },
-                  { title: "Trained In-House Staff", desc: "Deploy daily-wage laborers. Treat your property with respect." },
-                ].map((item, i) => (
-                  <div key={i} className="flex flex-col gap-3 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-orange-500/20 transition-all">
-                    <div className="inline-flex items-center gap-2">
-                      <div className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center shrink-0">
-                        <CheckCircle size={18} className="text-orange-600" />
-                      </div>
-                      <h4 className="text-base font-black text-slate-900 font-outfit">{item.title}</h4>
-                    </div>
-                    <p className="text-slate-600 text-sm leading-relaxed font-semibold pl-10 border-l-2 border-orange-500/20">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="overflow-x-auto rounded-2xl border border-slate-200 mt-8"
+              >
+                <table className="w-full text-left border-collapse">
+                  <thead className="bg-slate-50">
+                    <tr>
+                      <th className="p-4 md:p-5 text-sm font-black text-slate-900 border-b border-r border-slate-200 uppercase tracking-wider text-center">Points</th>
+                      <th className="p-4 md:p-5 text-sm font-black text-slate-900 border-b border-slate-200 uppercase tracking-wider text-center">Reasons to Choose</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white">
+                    {[
+                      { title: "Fixed, Transparent Billing", desc: "No extra cost required. Pay exactly what we agreed initially." },
+                      { title: "Fully Insured Goods", desc: "Robust transit insurance options. Best policy against unexpected road incidents." },
+                      { title: "Trained In-House Staff", desc: "Deploy daily-wage laborers. Treat your property with respect." },
+                    ].map((item, i) => (
+                      <tr key={i} className="hover:bg-slate-50/50 transition-colors">
+                        <td className="p-4 md:p-5 border-b border-r border-slate-200 text-sm font-bold text-slate-900 leading-relaxed min-w-[180px]">
+                          {item.title}
+                        </td>
+                        <td className="p-4 md:p-5 border-b border-slate-200 text-sm font-semibold text-slate-800 leading-relaxed">
+                          {item.desc}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </motion.div>
 
               <div className="mt-8 p-5 bg-orange-50/50 border-l-4 border-orange-500 rounded-r-xl">
                 <p className="text-slate-700 text-sm font-bold leading-relaxed">

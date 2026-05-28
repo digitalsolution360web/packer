@@ -3,9 +3,9 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
-    const { firstName, lastName, phone, email, message } = await request.json();
+    const { name, phone, fromCity, toCity, shiftType } = await request.json();
 
-    if (!firstName || !lastName || !phone || !message) {
+    if (!name || !phone) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -23,19 +23,17 @@ export async function POST(request: Request) {
     const mailOptions = {
       from: process.env.GMAIL_USER || 'digitalsolution3600@gmail.com',
       to: 'sihag6551@gmail.com, digitalsolution3600@gmail.com',
-      subject: `New Contact Enquiry from ${firstName} ${lastName}`,
+      subject: `New Popup Enquiry from ${name}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-          <h2 style="color: #ea580c;">New Website Enquiry</h2>
-          <p><strong>Type:</strong> Contact Form</p>
-          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <h2 style="color: #ea580c;">New Quick Quote Enquiry</h2>
+          <p><strong>Type:</strong> Popup Modal Form</p>
+          <p><strong>Name:</strong> ${name}</p>
           <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Email:</strong> ${email || 'N/A'}</p>
-          <div style="margin-top: 20px; padding: 15px; bg-color: #f8fafc; border-radius: 5px;">
-            <strong>Message:</strong><br/>
-            ${message}
-          </div>
-          <p style="font-size: 10px; color: #94a3b8; margin-top: 30px;">Sent from Omni Logistics Website</p>
+          <p><strong>From:</strong> ${fromCity}</p>
+          <p><strong>To:</strong> ${toCity}</p>
+          <p><strong>Service Type:</strong> ${shiftType}</p>
+          <p style="font-size: 10px; color: #94a3b8; margin-top: 30px;">Sent from Omni Logistics Website Popup</p>
         </div>
       `,
     };

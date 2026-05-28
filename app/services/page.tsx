@@ -53,9 +53,9 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="pt-24 min-h-screen bg-white">
+    <div className="pt-0 min-h-screen bg-white">
       {/* Page Header */}
-      <section className="bg-slate-950 py-16 text-white relative overflow-hidden">
+      <section className="bg-slate-950 pt-32 pb-16 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
           <Image src="/banner.jpg" alt="Background" fill className="object-cover" />
         </div>

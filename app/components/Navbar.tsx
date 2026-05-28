@@ -7,7 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Menu, X, ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 
+import { useModal } from "../context/ModalContext";
+
 export default function Navbar() {
+  const { openModal } = useModal();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -75,13 +78,13 @@ export default function Navbar() {
 
             {/* Action Button */}
             <div className="flex items-center gap-4">
-              <a 
-                href="tel:+917015665848" 
+              <button 
+                onClick={openModal}
                 className="hidden sm:flex items-center gap-2 px-6 py-3 bg-orange-600 text-white rounded-xl text-[12px] font-black uppercase tracking-widest shadow-lg shadow-orange-600/20 hover:bg-orange-700 transition-all active:scale-95"
               >
                 <Phone size={14} fill="currentColor" />
                 BOOK NOW
-              </a>
+              </button>
 
               {/* Mobile Toggle */}
               <button 
@@ -116,13 +119,16 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="p-4 pt-2">
-                <a 
-                  href="tel:+917015665848" 
+                <button 
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    openModal();
+                  }}
                   className="w-full flex items-center justify-center gap-3 py-4 bg-orange-600 text-white rounded-xl font-black text-sm"
                 >
                   <Phone size={18} fill="currentColor" />
-                  CALL NOW
-                </a>
+                  BOOK NOW
+                </button>
               </div>
             </div>
           </motion.div>
