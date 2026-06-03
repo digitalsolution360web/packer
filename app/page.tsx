@@ -42,7 +42,11 @@ const staggerContainer = {
   viewport: { once: true }
 };
 
-const schema = {
+
+export default function Home() {
+  const [activeLocation, setActiveLocation] = useState(0);
+  const [activeFaq, setActiveFaq] = useState<number | null>(0);
+  const schema = {
   "@context": "https://schema.org",
   "@type": "MovingCompany",
   "name": "Packers and Movers Jalandhar",
@@ -84,10 +88,6 @@ const schema = {
   ],
   "description": "Professional packing, moving, loading, unloading, household shifting, office relocation and transportation services in Jalandhar and nearby areas."
 }
-
-export default function Home() {
-  const [activeLocation, setActiveLocation] = useState(0);
-  const [activeFaq, setActiveFaq] = useState<number | null>(0);
 
   const locations = [
     {
