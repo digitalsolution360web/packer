@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Script from "next/script";
 import {
   Truck,
   Home as HomeIcon,
@@ -40,6 +41,49 @@ const staggerContainer = {
   whileInView: { transition: { staggerChildren: 0.15 } },
   viewport: { once: true }
 };
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "Packers and Movers Jalandhar",
+  "url": "https://www.packersandmoversjalandhar.com/",
+  "telephone": "+91-9855452352",
+  "alternateName": "Movers & Packers",
+  "email": "info@packersandmoversjalandhar.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "150/2 Banda Bahadur Nagar, Near Ram Mandir, Sangat Colony",
+    "addressLocality": "Jalandhar",
+    "addressRegion": "Punjab",
+    "postalCode": "144001",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "22:00"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jalandhar"
+    },
+    {
+      "@type": "City",
+      "name": "Amritsar"
+    }
+  ],
+  "description": "Professional packing, moving, loading, unloading, household shifting, office relocation and transportation services in Jalandhar and nearby areas."
+}
 
 export default function Home() {
   const [activeLocation, setActiveLocation] = useState(0);
@@ -122,6 +166,13 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
     <div className="flex flex-col relative overflow-x-hidden font-sans">
 
       {/* Hero Section */}
@@ -854,5 +905,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }
