@@ -24,7 +24,9 @@ import {
   Calendar,
   Sparkles,
   Quote,
-  CheckCircle
+  CheckCircle,
+  ZoomIn,
+  X
 } from "lucide-react";
 import { blogPosts } from "./blog/data";
 
@@ -45,7 +47,8 @@ const staggerContainer = {
 export default function Home() {
   const [activeLocation, setActiveLocation] = useState(0);
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
- 
+  const [isCertModalOpen, setIsCertModalOpen] = useState(false);
+
 
   const locations = [
     {
@@ -406,7 +409,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -560,7 +563,7 @@ export default function Home() {
                 Choosing unverified local packers and movers in Jalandhar isn’t a wise choice. This often results in hidden fees or damaged cargo. Omni Logistics sets a higher benchmark:
               </p>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -639,6 +642,133 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Certification Section */}
+      <section className="py-24 bg-slate-200 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(249,115,22,0.05),transparent_70%)] opacity-50" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <div className="inline-block px-3 py-1 bg-orange-500/10 text-orange-600 font-black text-xs uppercase tracking-[0.2em] rounded-md mb-3 border border-orange-500/20">
+              Recognition & Trust
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 font-outfit mb-4">
+              Our Official Certifications
+            </h2>
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed font-semibold">
+              We are proud to be recognized by industry leaders for our commitment to quality, safety, and excellence in logistics services.
+            </p>
+          </motion.div>
+
+          <div className="max-w-2xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative group cursor-pointer"
+              onClick={() => setIsCertModalOpen(true)}
+            >
+              {/* Decorative background elements */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-orange-500/10 to-amber-500/10 rounded-[2rem] blur-2xl group-hover:bg-orange-500/20 transition-all duration-500 -z-10" />
+
+              <div className="relative bg-white p-4 md:p-8 rounded-2xl shadow-2xl border border-slate-100 overflow-hidden">
+                <Image
+                  src="/certification.webp"
+                  alt="Omni Logistics Certificate of Appreciation 2026"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto rounded-lg transition-transform duration-700 group-hover:scale-[1.02]"
+                />
+
+                {/* Zoom Overlay */}
+                <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="bg-white px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <ZoomIn className="text-orange-500 w-6 h-6" />
+                    <span className="font-bold text-slate-900">Zoom-in to View</span>
+                  </div>
+                </div>
+
+                {/* Floating "Zoom-in" button inspired by reference */}
+                <div className="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-20">
+                  <div className="bg-white/90 backdrop-blur-md px-4 py-2 md:px-6 md:py-3 rounded-xl border border-slate-200 shadow-xl flex items-center gap-2 md:gap-3 hover:scale-110 transition-transform cursor-pointer">
+                    <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-slate-900 flex items-center justify-center">
+                      <span className="text-slate-900 text-lg md:text-xl font-bold">+</span>
+                    </div>
+                    <span className="text-slate-900 font-bold text-sm md:text-base whitespace-nowrap">Zoom-in</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                {[
+                  { label: "Verified Partner", icon: <ShieldCheck className="w-5 h-5" /> },
+                  { label: "Quality Assured", icon: <CheckCircle className="w-5 h-5" /> },
+                  { label: "Elite Member", icon: <Star className="w-5 h-5" /> },
+                  { label: "Licensed & Bonded", icon: <Shield className="w-5 h-5" /> }
+                ].map((badge, idx) => (
+                  <div key={idx} className="flex flex-col items-center gap-3 text-slate-600 group-hover:text-orange-600 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-slate-300 shadow-sm group-hover:border-orange-500/20 group-hover:bg-orange-50 transition-all">
+                      {badge.icon}
+                    </div>
+                    <span className="text-[10px] uppercase font-black tracking-widest leading-none">{badge.label}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certification Lightbox */}
+      <AnimatePresence>
+        {isCertModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-slate-950/80 backdrop-blur-md"
+            onClick={() => setIsCertModalOpen(false)}
+          >
+            <motion.button
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="absolute top-6 right-6 md:top-10 md:right-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all z-50"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsCertModalOpen(false);
+              }}
+            >
+              <X size={24} />
+            </motion.button>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative max-w-3xl w-full max-h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src="/certification.webp"
+                alt="Omni Logistics Certificate Full View"
+                width={1200}
+                height={850}
+                className="w-full h-auto max-h-[85vh] object-contain"
+                priority
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
       {/* Our Testimonials Section */}
       <section className="py-24 bg-slate-50 border-t border-b border-slate-100">
@@ -751,29 +881,26 @@ export default function Home() {
             ].map((faq, i) => (
               <div
                 key={i}
-                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                  activeFaq === i
-                    ? "bg-slate-900 border-slate-800 shadow-xl"
-                    : "bg-white border-slate-100 hover:border-orange-500/30"
-                }`}
+                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${activeFaq === i
+                  ? "bg-slate-900 border-slate-800 shadow-xl"
+                  : "bg-white border-slate-100 hover:border-orange-500/30"
+                  }`}
               >
                 <button
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
                   className="w-full px-6 py-5 text-left flex items-center justify-between gap-4"
                 >
                   <span
-                    className={`text-base md:text-lg font-bold font-outfit transition-colors leading-tight ${
-                      activeFaq === i ? "text-white" : "text-slate-900"
-                    }`}
+                    className={`text-base md:text-lg font-bold font-outfit transition-colors leading-tight ${activeFaq === i ? "text-white" : "text-slate-900"
+                      }`}
                   >
                     {faq.q}
                   </span>
                   <div
-                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                      activeFaq === i
-                        ? "bg-orange-500 text-white rotate-180"
-                        : "bg-orange-50 text-orange-600"
-                    }`}
+                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${activeFaq === i
+                      ? "bg-orange-500 text-white rotate-180"
+                      : "bg-orange-50 text-orange-600"
+                      }`}
                   >
                     <ChevronRight size={18} />
                   </div>
