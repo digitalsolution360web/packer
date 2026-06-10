@@ -33,6 +33,14 @@ const HEADINGS = new Set([
   "Introduction",
   "Premium Local Moving Solutions in Jalandhar Cantt",
   "Why Pick Omni as Your Trusted Movers and Packers Jalandhar Cantt?",
+  // Jalandhar Packers and Movers blog
+  "Ultimate Guide to Choosing Jalandhar Packers and Movers",
+  "Stress-Free House Shifting Services in Jalandhar",
+  "Efficient Office Shifting Services in Jalandhar",
+  "Reliable Local Packers and Movers Jalandhar",
+  "Seamless Domestic Relocation Services Jalandhar",
+  "Premium Vehicle and Household Shifting Services Jalandhar",
+  "Why Trust Professional Movers and Packers Jalandhar?",
   // Car transport blog
   "Best Car Transport Service in Jalandhar – Safe Vehicle Relocation Guide",
   "Understanding Our Specialized Car Carrier Service in Jalandhar",

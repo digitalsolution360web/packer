@@ -35,6 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/jalandhar-packers-and-movers`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
+    {
       url: `${baseUrl}/office-relocation-services-jalandhar`,
       lastModified: new Date(),
       priority: 0.64,
