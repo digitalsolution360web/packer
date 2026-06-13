@@ -52,6 +52,12 @@ const HEADINGS = new Set([
   "1. Cost of House Shifting in Jalandhar",
   "2. How to Shift Home Safely in Jalandhar: Expert Tips",
   "Why Omini is the Right Packers And Movers in Jalandhar",
+  // Intercity vs Local shifting blog
+  "Intercity vs Local Shifting in Jalandhar: Cost, Process & Key Differences",
+  "What is Local Shifting Jalandhar?",
+  "What is the Role of Intercity Movers Jalandhar?",
+  "Cost Comparison of Local vs Intercity Relocation",
+  "Packing and Process: A Clear Home Shifting Comparison",
   // Shared across all blogs
   "Conclusion",
   "FAQs",
@@ -279,7 +285,7 @@ export default function BlogDetailPage() {
               <div className="bg-slate-50 p-7 rounded-3xl border border-slate-100">
                 <h4 className="text-lg font-black text-slate-900 mb-6 font-outfit">Recent Posts</h4>
                 <div className="space-y-5">
-                  {blogPosts.filter(p => p.slug !== post.slug).slice(0, 4).map(recent => (
+                  {blogPosts.filter(p => p.slug !== post.slug).map(recent => (
                     <Link key={recent.slug} href={`/${recent.slug}`} className="flex gap-4 group">
                       <div className="w-18 h-16 relative rounded-xl overflow-hidden shrink-0 border border-slate-100" style={{ width: 64 }}>
                         <Image src={recent.img} alt={recent.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
