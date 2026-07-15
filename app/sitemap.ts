@@ -74,5 +74,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.64,
     },
+    {
+      url: `${baseUrl}/intercity-vs-local-shifting-jalandhar`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
+    {
+      url: `${baseUrl}/home-shifting-company-jalandhar`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
   ];
 }

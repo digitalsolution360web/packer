@@ -58,6 +58,10 @@ const HEADINGS = new Set([
   "What is the Role of Intercity Movers Jalandhar?",
   "Cost Comparison of Local vs Intercity Relocation",
   "Packing and Process: A Clear Home Shifting Comparison",
+  // Home Shifting Company Jalandhar blog
+  "Why Choose the Best Home Shifting Service in Jalandhar?",
+  "Premium Benefits of Professional Packers and Movers in Jalandhar",
+  "Comprehensive Relocation Offerings by Home Movers in Jalandhar",
   // Shared across all blogs
   "Conclusion",
   "FAQs",
@@ -77,8 +81,11 @@ export default function BlogDetailPage() {
     );
   }
 
+  // Normalize CRLF to LF to prevent SSR vs client hydration mismatch on Windows
+  const normalizedContent = post.content.replace(/\r\n/g, "\n");
+
   // Split by blank lines (handles template literal indentation whitespace on blank lines)
-  const rawParagraphs = post.content
+  const rawParagraphs = normalizedContent
     .split(/\n[ \t]*\n/)
     .map(p => p.trim())
     .filter(p => p.length > 1);
