@@ -16,7 +16,11 @@ interface FAQItem {
 
 // All headings across ALL blog posts - exact match after trim
 const HEADINGS = new Set([
-  // Bike blog
+  // Bike shifting company blog
+  "Strategic Relocation Blueprint: Hiring the Best bike Shifting Company In Jalandhar",
+  "Unmatched Safety Protocol: The Best Bike Shifting Service in Jalandhar",
+  "Beyond Simple Transport: Choosing Expert Packers and Movers in Jalandhar",
+  // Bike transport blog
   "Secure Your Ride: The Ultimate Guide to Bike Transport Service in Jalandhar",
   "The Omni Logistics Advantage: Safe Bike Relocation Protocols",
   "Preparing Your Vehicle for a Smooth Shifting Experience",

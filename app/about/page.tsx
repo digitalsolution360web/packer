@@ -37,14 +37,14 @@ export default function AboutPage() {
       {/* Main Content (Who We Are) */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="lg:w-1/2"
+              className="w-full lg:w-1/2"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-slate-50 h-[300px] md:h-[400px]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-slate-50 w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]">
                 <Image src="/home.png" alt="Who We Are" fill className="object-cover object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
               </div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:w-1/2"
+              className="w-full lg:w-1/2"
             >
               <h2 className="text-xs font-black text-orange-600 tracking-[0.2em] uppercase mb-3">Who We Are</h2>
               <h3 className="text-3xl font-black text-slate-900 mb-6 font-outfit">Welcome To Movers & Packers</h3>
