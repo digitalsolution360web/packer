@@ -6,7 +6,7 @@ export const blogPosts = [
     metaDescription: "Choose the most dependable bike shifting company in Jalandhar for damage-free residential moving, premium multi-layer packing, and fully transparent, affordable pricing options.",
     date: "July 15, 2026",
     author: "Packers Admin",
-    img: "/home2.jpg",
+    img: "/bike-shifting-company-in-jalandhar.webp",
     category: "Bike Shifting",
     excerpt: "Strategic Relocation Blueprint: Hiring the Best bike Shifting Company In Jalandhar. Finding a dependable bike transport company in Jalandhar is the definitive step...",
     content: `Strategic Relocation Blueprint: Hiring the Best bike Shifting Company In Jalandhar
@@ -160,7 +160,7 @@ We keep the bike secured during the transition. We provide multi-layered bubble 
     metaDescription: "Comprehensive guide to office relocation Jalandhar. Partner with the best commercial movers for a secure, efficient, and highly organized business shifting experience.",
     date: "May 9, 2026",
     author: "Packers Admin",
-    img: "/blog.jpeg",
+    img: "/office-relocation-services-jalandhar.webp",
     category: "Office Relocation",
     excerpt: "Comprehensive guide to office relocation Jalandhar. Partner with the best commercial movers for a secure, efficient, and highly organized business shifting experience.",
     content: `Moving Your Workspace: A Seamless Office Relocation Jalandhar Guide
@@ -298,7 +298,7 @@ We keep the bike secured during the transition. We provide multi-layered bubble 
     metaDescription: "Get honest packers and movers charges Jalandhar. Omni Logistics provides clear relocation cost breakdowns with zero hidden fees for 2026.",
     date: "April 16, 2026",
     author: "Packers Admin",
-    img: "/home2.jpg",
+    img: "/hidden-charges-packers-movers-jalandhar.webp",
     category: "Relocation Tips",
     excerpt: "Hidden Charges in Packers and Movers in Jalandhar Explained: How to Protect Your Budget. The art of relocation is not everyone’s cup of tea...",
     content: `Hidden Charges in Packers and Movers in Jalandhar Explained: How to Protect Your Budget
@@ -367,7 +367,7 @@ We keep the bike secured during the transition. We provide multi-layered bubble 
     metaDescription: "Get top-rated, secure, and fast packers and movers in Kapurthala. Omni Logistics offers professional home and office shifting services across Punjab.",
     date: "April 3, 2026",
     author: "Packers Admin",
-    img: "/blog2.jpeg",
+    img: "/packers-movers-kapurthala-hoshiarpur-beas.webp",
     category: "Regional Support",
     excerpt: "The Gold Standard of Packers and Movers in Kapurthala. Shifting is a precise part of work when it comes to switching to a new home or office...",
     content: `The Gold Standard of Packers and Movers in Kapurthala 
@@ -510,7 +510,7 @@ We keep the bike secured during the transition. We provide multi-layered bubble 
     metaDescription: "A suitable and trusted packer and mover is rare to find in any place. In a crowded city like Jalandhar, the demand for car transportation services is very high. However",
     date: "February 21, 2026",
     author: "Packers Admin",
-    img: "/s4.jpg",
+    img: "/best-car-transport-service-jalandhar.webp",
     category: "Car Carrier",
     excerpt: "Best Car Transport Service in Jalandhar – Safe Vehicle Relocation Guide. A suitable and trusted packer and mover is rare to find...",
     content: `Best Car Transport Service in Jalandhar – Safe Vehicle Relocation Guide
@@ -585,7 +585,7 @@ We keep the bike secured during the transition. We provide multi-layered bubble 
     metaDescription: "Introduction In the era of forgery and scam services, finding trusted packers and movers in Jalandhar is no longer a challenging task. With Omini, now, anyone can arrange their home",
     date: "February 12, 2026",
     author: "Packers Admin",
-    img: "/home.png",
+    img: "/complete-guide-house-shifting-jalandhar.webp",
     category: "Household",
     excerpt: "Complete Guide to House Shifting in Jalandhar – Costs, Tips & Process. In the era of forgery and scam services, finding trusted...",
     content: `Complete Guide to House Shifting in Jalandhar – Costs, Tips & Process
@@ -675,7 +675,7 @@ We keep the bike secured during the transition. We provide multi-layered bubble 
     metaDescription: "Discover the core difference between local and intercity shifting in Jalandhar. Compare processes and check our complete cost comparison of local vs intercity relocation.",
     date: "June 10, 2026",
     author: "Packers Admin",
-    img: "/blog.jpeg",
+    img: "/intercity-vs-local-shifting-jalandhar.webp",
     category: "Shifting Guide",
     excerpt: "Discover the core difference between local and intercity shifting in Jalandhar. Compare processes and check our complete cost comparison of local vs intercity relocation.",
     content: `Intercity vs Local Shifting in Jalandhar: Cost, Process & Key Differences
@@ -776,7 +776,7 @@ We keep the bike secured during the transition. We provide multi-layered bubble 
     metaDescription: "Secure your household relocation with the most trusted Home Shifting Company In Jalandhar. We provide affordable packing and secure transit across Punjab.",
     date: "July 11, 2026",
     author: "Packers Admin",
-    img: "/home1.jpg",
+    img: "/home-shifting-company-jalandhar.webp",
     category: "Household",
     excerpt: "Secure your household relocation with the most trusted Home Shifting Company In Jalandhar. We provide affordable packing and secure transit across Punjab.",
     content: `Why Choose the Best Home Shifting Service in Jalandhar?
