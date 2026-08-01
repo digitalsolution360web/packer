@@ -66,6 +66,9 @@ const HEADINGS = new Set([
   "Why Choose the Best Home Shifting Service in Jalandhar?",
   "Premium Benefits of Professional Packers and Movers in Jalandhar",
   "Comprehensive Relocation Offerings by Home Movers in Jalandhar",
+  // 10 Common Moving Mistakes blog
+  "Avoid Errors When Moving Your Home or Office | Join the Best Packers and Movers in Jalandhar",
+  "10 Common Moving Mistakes & How to Avoid Them",
   // Shared across all blogs
   "Conclusion",
   "FAQs",

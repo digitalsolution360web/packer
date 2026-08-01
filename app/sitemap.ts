@@ -89,5 +89,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.64,
     },
+    {
+      url: `${baseUrl}/common-moving-mistakes`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
   ];
 }
