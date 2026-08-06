@@ -614,8 +614,6 @@ return(
 </h3>
 
 </div>
-
-
 <p className="text-slate-600 mb-8">
 {description}
 </p>
@@ -627,8 +625,6 @@ return(
 )
 
 }
-
-
 function SimpleTable({rows}:any){
 
 return(
