@@ -94,5 +94,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.64,
     },
+    {
+      url: `${baseUrl}/high-protein-foods-to-lose-weight`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
   ];
 }
