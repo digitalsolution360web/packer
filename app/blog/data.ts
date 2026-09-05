@@ -6,7 +6,7 @@ export const blogPosts = [
         metaDescription: "Book trusted car transport service Jalandhar to Mumbai with Omni Logistics. Get doorstep pickup, open and enclosed carriers, full insurance, and fast delivery across Maharashtra.",
         date: "September 1, 2026",
         author: "Packers Admin",
-        img: "/car-transport-service-jalandhar-to-mumbai.webp",
+        img: "/packers-movers-kapurthala-hoshiarpur-beas.webp",
         category: "Car Transportation",
         excerpt: "Book trusted car transport service Jalandhar to Mumbai with Omni Logistics. Get doorstep pickup, open and enclosed carriers, full insurance, and fast delivery across Maharashtra.",
         content: `Seamless Auto Moving  | Smooth Car Transport Service Jalandhar to Mumbai
@@ -102,7 +102,7 @@ export const blogPosts = [
 
       Q4: How is my car protected against damage?
       You’re covered by full transit insurance against accidents or bad weather, backed by a photo inspection before loading to track its exact condition.\
-      
+
       Q5: Can you shift my bike and car together?
       Yes. We pack the bike in multi-layer protection and crate supports so both ride securely on the same truck and land together in Mumbai.`
       },
