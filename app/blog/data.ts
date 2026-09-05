@@ -1,7 +1,7 @@
 export const blogPosts = [
       {
         slug: "car-transport-service-jalandhar-to-mumbai",
-        title: "Car transport service Jalandhar to Mumbai – Omni Logistics – 1 Sept 2026",
+        title: "Car transport service Jalandhar to Mumbai – Omni Logistics",
         metaTitle: "Reliable Car Transport Service Jalandhar to Mumbai | Omni Logistics",
         metaDescription: "Book trusted car transport service Jalandhar to Mumbai with Omni Logistics. Get doorstep pickup, open and enclosed carriers, full insurance, and fast delivery across Maharashtra.",
         date: "September 1, 2026",
@@ -109,7 +109,7 @@ export const blogPosts = [
 
        {
       slug: "car-transport-company-in-jalandhar",
-      title: "Car Transport Company in Jalandhar – Omni Logistics – 31 Aug 2026",
+      title: "Car Transport Company in Jalandhar – Omni Logistics",
       metaTitle: "Car Transport Company in Jalandhar | Omni Logistics Safe Car Moving",
       metaDescription: "Appoint a trusted car transport company in Jalandhar. Omni Logistics is the name you seek. Grab your opportunity for insured car shifting in Jalandhar. Book today!",
       date: "August 31, 2026",
@@ -210,7 +210,7 @@ export const blogPosts = [
  
         {
       slug: "car-transport-jalandhar-to-delhi",
-      title: "Car Transport Jalandhar to Delhi – Omni Logistics – 28 Aug 2026",
+      title: "Car Transport Jalandhar to Delhi – Omni Logistics ",
       metaTitle: "Car Transport Jalandhar to Delhi | Safe Car Relocation Omni Logistics",
       metaDescription: "Get the best car transport services Jalandhar to Delhi price. Omni Logistics ensures safe car transportation, live vehicle tracking, and rapid delivery across Delhi NCR.",
       date: "August 28, 2026",
