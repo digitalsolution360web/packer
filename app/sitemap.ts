@@ -99,5 +99,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.64,
     },
+        {
+      url: `${baseUrl}/car-transport-company-in-jalandhar`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
+    {
+      url: `${baseUrl}/car-transport-jalandhar-to-delhi`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
+    {
+      url: `${baseUrl}/car-transport-service-jalandhar-to-mumbai`,
+      lastModified: new Date(),
+      priority: 0.64,
+    },
   ];
 }
