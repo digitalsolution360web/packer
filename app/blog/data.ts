@@ -6,7 +6,7 @@ export const blogPosts = [
         metaDescription: "Book trusted car transport service Jalandhar to Mumbai with Omni Logistics. Get doorstep pickup, open and enclosed carriers, full insurance, and fast delivery across Maharashtra.",
         date: "September 1, 2026",
         author: "Packers Admin",
-        img: "/packers-movers-kapurthala-hoshiarpur-beas.webp",
+        img: "/car-transport-service-jalandhar-to-mumbai.webp",
         category: "Car Transportation",
         excerpt: "Book trusted car transport service Jalandhar to Mumbai with Omni Logistics. Get doorstep pickup, open and enclosed carriers, full insurance, and fast delivery across Maharashtra.",
         content: `Seamless Auto Moving  | Smooth Car Transport Service Jalandhar to Mumbai
